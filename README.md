@@ -5,6 +5,27 @@ Usage:
 ```sh
 $ python bb-deploy-keys.py --help
 ```
+```sh
+usage: bb-deploy-key.py [-h] -a ACCOUNTNAME -r REPO_SLUG -u USER [-l LABEL]
+                        file
+
+Add deployment key to bitbucket repository.
+
+positional arguments:
+  file                  The file containing the public key. (Eg.:
+                        ~/.ssh/id_rsa.pub)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a ACCOUNTNAME, --accountname ACCOUNTNAME
+                        The team or individual account.
+  -r REPO_SLUG, --repo_slug REPO_SLUG
+                        The repo identifier (not to be confused with the
+                        repo's name).
+  -u USER, --user USER  Your bitbucket username.
+  -l LABEL, --label LABEL
+                        A display name for the key.
+```
 
 Example:
 ```sh
