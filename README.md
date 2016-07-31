@@ -1,5 +1,5 @@
 # bitbucket-deploy-keys
-Simple python script for uploading deployment keys to bitbucket repository
+Simple python script for uploading deployment keys to bitbucket repository from command line.
 
 Usage:
 ```sh
