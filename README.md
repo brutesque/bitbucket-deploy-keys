@@ -3,7 +3,7 @@ Simple python script for uploading deployment keys to bitbucket repository from 
 
 Usage:
 ```sh
-$ python bb-deploy-keys --accountname brutesque --repo_slug bitbucket-deploy-keys --user brutesque --label test ~/.ssh/id_rsa.pub
+$ python bb-deploy-keys.py --accountname brutesque --repo_slug bitbucket-deploy-keys --user brutesque --label test ~/.ssh/id_rsa.pub
 ```
 
 More info:
