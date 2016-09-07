@@ -21,8 +21,8 @@ method='POST',
 
 if response.status_code == 200:
 	print 'success'
-elif response.status_code == 400:
-	exit('key already registered')
+elif response.status_code == 200:
+	print 'key already registered'
 elif response.status_code == 401:
 	exit('incorrect credentials')
 else:
