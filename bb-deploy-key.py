@@ -26,5 +26,6 @@ elif response.status_code == 200:
 elif response.status_code == 401:
 	exit('incorrect credentials')
 else:
+	print response.status_code
 	print response.content
 	exit('failed')
