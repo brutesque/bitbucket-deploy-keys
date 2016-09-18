@@ -18,7 +18,7 @@ parser.add_argument('-l', '--label', help='A display name for the key.', type=st
 parser.add_argument("file", help="The file containing the public key. (Eg.: ~/.ssh/id_rsa.pub)")
 
 args = parser.parse_args()
-password = os.environ['BB_PASSWORD'] if 'BB_PASSWORD' in os.environ else getpass.getpass()
+password = os.environ['BITBUCKETPASSWORD'] if 'BITBUCKETPASSWORD' in os.environ else getpass.getpass()
 response = requests.request(
     method='POST',
     url=('https://api.bitbucket.org/1.0/repositories/%s/%s/deploy-keys' % (args.accountname, args.repo_slug)),
@@ -33,6 +33,8 @@ if response.status_code == 200:
     print 'success'
 elif response.status_code == 200:
     print 'key already registered'
+elif response.status_code == 400:
+    print 'Someone has already registered this key as a deploy key for this repository'
 elif response.status_code == 401:
     exit('incorrect credentials')
 else:
