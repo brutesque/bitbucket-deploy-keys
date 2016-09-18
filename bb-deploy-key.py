@@ -3,7 +3,6 @@ import argparse
 import requests
 import os
 import getpass
-print os.environ
 
 parser = argparse.ArgumentParser(description='Add deployment key to bitbucket repository.')
 parser.add_argument('-a', '--accountname', help='The team or individual account.', type=str, required=True)
