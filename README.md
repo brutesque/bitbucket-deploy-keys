@@ -7,6 +7,7 @@ $ python bb-deploy-keys.py --help
 ```
 ```sh
 usage: bb-deploy-key.py [-h] -a ACCOUNTNAME -r REPO_SLUG -u USER [-l LABEL]
+                        [-p PASSWORD]
                         file
 
 Add deployment key to bitbucket repository.
@@ -25,6 +26,8 @@ optional arguments:
   -u USER, --user USER  Your bitbucket username.
   -l LABEL, --label LABEL
                         A display name for the key.
+  -p PASSWORD, --password PASSWORD
+                        Supply password (insecure, use $BITBUCKET_PASSWORD)
 ```
 
 Example:
